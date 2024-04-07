@@ -1,0 +1,31 @@
+// Ex 03 - Faça um Programa que leia 4 notas, mostre as notas e a média na tela.
+
+import java.util.Scanner;
+
+public class Exercicio03 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double[] notas = new double[4];
+
+        for (int i = 0; i < notas.length; i++) {
+            System.out.print("Digite as quatro notas dos bimestres (Uma por vez): ");
+            notas[i] = scanner.nextDouble();
+        }
+
+        System.out.println("As notas foram: ");
+        for (int i = 0; i < notas.length - 1; i++) {
+            System.out.println(notas[i]);
+        }
+
+        double soma = 0;
+        for (int i = 0; i < notas.length; i++) {
+            soma += notas[i];
+        }
+
+            double media = soma / 4;
+            System.out.println("A média do aluno foi de: " + media);
+
+
+        }
+    }
